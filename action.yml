@@ -1,0 +1,24 @@
+name: Deployment Status
+description: Update the status of a GitHub deployment
+inputs:
+  token:
+    description: The repository token
+    required: true
+  state:
+    description: The deployment status
+    required: true
+  deployment:
+    description: The deployment identifier
+    required: false
+  environment:
+    description: The deployment environment
+    required: false
+  url:
+    description: The deployment environment URL
+    required: false
+  output:
+    description: The deployment output
+    required: false
+runs:
+  using: node12
+  main: dist/index.js
